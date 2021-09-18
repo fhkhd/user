@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'RequestList.dart';
 
 class LogIn extends StatefulWidget {
 
@@ -109,7 +110,12 @@ class _LogInState extends State<LogIn> {
         child: MaterialButton(
           minWidth: 184.0,
           height: 44.0,
-          onPressed: (){},
+          onPressed: (){
+
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => Requests()));
+
+          },
           child: Text('ورود',
             style: TextStyle(
               color: Colors.white,
