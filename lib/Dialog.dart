@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'RequestList.dart';
+import 'package:flutter/services.dart';
 class Dialogss {
 
   String? _chosenValue;
@@ -54,7 +56,10 @@ class Dialogss {
                 ],
               ),
               content: Container(
-                height: 394.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                height: 340.0,
                 width: MediaQuery.of(context).size.width-48,
                 child: Column(
                   children: <Widget>[
@@ -109,6 +114,74 @@ class Dialogss {
                         ),
                       ),
                     ),
+                    SizedBox(height: 40.0,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Padding(padding: EdgeInsets.only(right: 17.0),
+                    child: Text('توضیحات',
+                      style: TextStyle(
+                        fontFamily: 'IranianSans',
+                        fontSize: 14.0,
+                        color: HexColor('585858'),
+                        fontWeight: FontWeight.w400,
+                      ),
+                      textAlign: TextAlign.right,
+                    ),),
+                  Container(),
+                  Container(),
+                ],
+              ),
+                    SizedBox(height: 4.0,),
+                    new Material(
+                      child: new Container(
+                        width: MediaQuery.of(context).size.width-80,
+                        height: 145.0,
+                        child: TextField(
+                          maxLines: 100,
+                          autofocus: false,
+                          decoration: InputDecoration(
+                            hintText: 'توضیحات خود را وارد کنید ...',
+                            contentPadding: EdgeInsets.only(top: 1.0,right: 8.0,bottom: 100.0),
+                            border: InputBorder.none,
+                          ),
+                        ),
+                        decoration: BoxDecoration(
+                          border: Border.all(width: 1.0,color: HexColor('246DFF')),
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                      ),
+                      borderRadius: BorderRadius.circular(8.0),
+                      elevation: 8.0,
+                      shadowColor: HexColor('40246DFF'),
+                    ),
+              SizedBox(height: 28.0,),
+              Padding(
+                padding: EdgeInsets.only(left: 40.0,right: 40.0),
+                child: Material(
+                  color: HexColor('246DFF'),
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: MaterialButton(
+                    minWidth: 184.0,
+                    height: 44.0,
+                    onPressed: (){
+
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => Requests()));
+
+                    },
+                    child: Text('ارسال',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'IranianSans',
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.w700,),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
+
                   ],
                 ),
               ),
