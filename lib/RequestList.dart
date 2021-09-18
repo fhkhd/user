@@ -20,38 +20,64 @@ class _RequestsState extends State<Requests> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(
-        children: [
-          SizedBox(height: 12.0,),
-          Padding(
-            padding: EdgeInsets.only(left: 24.0,right: 24.0,bottom: 12.0),
+      appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: Colors.white,
+        actions: <Widget>[
+          Container(
+            width: MediaQuery.of(context).size.width,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text(
-                  'لیست درخواست های کاربران',
-                  style: TextStyle(
-                    color: HexColor('252525'),
-                    fontSize: 16.0,
-                    fontFamily: 'IranianSans',
-                  ),
-                ),
-                InkWell(
-                  onTap: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => LogIn()));
-                  },
-                  child: SvgPicture.asset('assets/forward_black_24dp.svg',height: 30,width: 30,),
-                ),
+                Container(),
+                      Padding(
+                        padding:  EdgeInsets.only(left: 26.0,top: 20.0,bottom: 0.0),
+                        child: InkWell(
+                          onTap: (){
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => LogIn()));
+                          },
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Text('خروج از حساب',
+                                style: TextStyle(
+                                  color: HexColor('246DFF'),
+                                  fontFamily: 'IranianSans',
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              SvgPicture.asset('assets/logoutsvg.svg',)
+                            ],
+                          ),
+                        ),
+                      ),
               ],
             ),
+          ),
+        ],
+      ),
+      body: ListView(
+        children: [
+          Container(
+            child: Padding(
+              padding: EdgeInsets.only(right: 24.0,top: 0.0),
+              child: Text(
+                'لیست درخواست های داده شده',
+                style: TextStyle(
+                  color: HexColor('252525'),
+                  fontWeight: FontWeight.w500,
+                  fontSize: 16.0,
+                  fontFamily: 'IranianSans',
+                ),
+              ),),
           ),
           Container(
             height: MediaQuery.of(context).size.height,
             child: ListView(
               scrollDirection: Axis.vertical,
               children: <Widget>[
-                Padding(padding: EdgeInsets.only(left: 20.0,right: 20.0,top: 10.0),
+                Padding(padding: EdgeInsets.only(left: 20.0,right: 20.0,top: 18.0),
                   child: Request(),
                 ),
 
@@ -138,7 +164,7 @@ class _RequestsState extends State<Requests> {
             children: [
               Row(
                 children: [
-                  SizedBox(height: 13.0,),
+                  SizedBox(height: 8.0,),
                   Text(
                     'نام درخواست دهنده:',
                     style: TextStyle(
@@ -162,7 +188,7 @@ class _RequestsState extends State<Requests> {
                   ),
                 ],
               ),
-              SizedBox(height: 16.0,),
+              SizedBox(height: 8.0,),
               Row(
                 children: [
                   Text(
@@ -188,7 +214,7 @@ class _RequestsState extends State<Requests> {
                   ),
                 ],
               ),
-              SizedBox(height: 16.0,),
+              SizedBox(height: 8.0,),
               Row(
                 children: [
                   Text(
@@ -214,7 +240,7 @@ class _RequestsState extends State<Requests> {
                   ),
                 ],
               ),
-              SizedBox(height: 16.0,),
+              SizedBox(height: 8.0,),
               Row(
                 children: [
                   Text(
