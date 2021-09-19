@@ -19,7 +19,7 @@ class _LogInState extends State<LogIn> {
     final login= Text(
       'ورود',
       style: TextStyle(
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.bold,
         fontSize: 20.0,
         fontFamily: 'IranianSans',
         color: HexColor('252525'),
@@ -56,6 +56,19 @@ class _LogInState extends State<LogIn> {
               contentPadding: EdgeInsets.only(top: 1.0),
               // border: InputBorder.none,
               prefixIcon: Icon(Icons.person_outline,color: Colors.grey,size: 24.0),
+
+              // Row(
+              //   children: [
+              //     Divider(
+              //       height: 10.0,
+              //       thickness: 0.2,
+              //       color: Colors.black,
+              //       indent: 0.2,
+              //       endIndent: 0.2,
+              //     ),
+              //
+              //   ],
+              // ),
             ),
           ),
           decoration: BoxDecoration(

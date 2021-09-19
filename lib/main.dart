@@ -4,6 +4,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'LoggIn.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(MaterialApp(
   title: "App",
@@ -12,6 +13,10 @@ void main() => runApp(MaterialApp(
     GlobalWidgetsLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,
   ],
+    // SystemChrome.setPreferredOrientation([
+    //   DeviceOrientation.portraitUp,
+    //   DeviceOrientation.portraitDown,
+    // ]);
   supportedLocales: [
     Locale('fa'), // English, no country code
   ],
