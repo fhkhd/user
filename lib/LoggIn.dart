@@ -40,23 +40,27 @@ class _LogInState extends State<LogIn> {
 
     final username = Material(
       borderRadius: BorderRadius.circular(8.0),
-      child: Container(
-        height: 40.0,
-        width: 264.0,
-        child: TextFormField(
-          keyboardType: TextInputType.emailAddress,
-          autofocus: false,
-          // initialValue: 'fhkhdkri@yahoo.com',
-          decoration: InputDecoration(
-            hintText: 'نام کاربری',
-            contentPadding: EdgeInsets.only(top: 1.0),
-            border: InputBorder.none,
-            prefixIcon: Icon(Icons.person_outline,color: Colors.grey,size: 24.0),
+      child: InkWell(
+        child: Container(
+          height: 40.0,
+          width: 264.0,
+          child: TextFormField(
+            keyboardType: TextInputType.emailAddress,
+            autofocus: true,
+            decoration: InputDecoration(
+              border: new OutlineInputBorder(
+                  borderSide: new BorderSide(width: 1.0,color: HexColor('246DFF')),
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              hintText: 'نام کاربری',
+              contentPadding: EdgeInsets.only(top: 1.0),
+              // border: InputBorder.none,
+              prefixIcon: Icon(Icons.person_outline,color: Colors.grey,size: 24.0),
+            ),
           ),
-        ),
-        decoration: BoxDecoration(
-          border: Border.all(width: 1.0,color: HexColor('246DFF')),
-          borderRadius: BorderRadius.circular(8.0),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8.0),
+          ),
         ),
       ),
       elevation: 8.0,
@@ -86,14 +90,16 @@ class _LogInState extends State<LogIn> {
           // initialValue: '1234',
           obscureText: true,
           decoration: InputDecoration(
+            border: new OutlineInputBorder(
+              borderSide: new BorderSide(width: 1.0,color: HexColor('246DFF')),
+              borderRadius: BorderRadius.circular(8.0),
+            ),
             contentPadding: EdgeInsets.only(top: 1.0),
             hintText: 'رمز عبور',
-            border: InputBorder.none,
             prefixIcon: Icon(Icons.lock,color: Colors.grey,size: 24.0),
           )
           ),
         decoration: BoxDecoration(
-          border: Border.all(width: 1.0,color: HexColor('246DFF')),
           borderRadius: BorderRadius.circular(8.0),
         ),
       ),
