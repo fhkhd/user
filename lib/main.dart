@@ -13,10 +13,6 @@ void main() => runApp(MaterialApp(
     GlobalWidgetsLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,
   ],
-    // SystemChrome.setPreferredOrientation([
-    //   DeviceOrientation.portraitUp,
-    //   DeviceOrientation.portraitDown,
-    // ]);
   supportedLocales: [
     Locale('fa'), // English, no country code
   ],
@@ -28,6 +24,12 @@ class blue extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
 
 
     Timer(
