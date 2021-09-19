@@ -1,0 +1,77 @@
+[33mcommit eb79c0facd4b4668490529aaa3a448beb4f3b8cf[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: fhkhd <fhkhdkri.yahoo.com>
+Date:   Sun Sep 19 23:42:46 2021 +0430
+
+    remove InkWell from splash screem
+
+[33mcommit 7157d4c99bb67b53edc5f655071002bfc051273a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: fhkhd <fhkhdkri.yahoo.com>
+Date:   Sun Sep 19 23:21:34 2021 +0430
+
+    fix portrait
+
+[33mcommit 8bea778cce3b3adeb2f7e382c526ff1e2d2c5acc[m
+Author: fhkhd <fhkhdkri.yahoo.com>
+Date:   Sun Sep 19 22:44:44 2021 +0430
+
+    convert the app to portrait
+
+[33mcommit 50a5fbb54bbdddc4ae96f9258e87f1b2553911ba[m
+Author: fhkhd <fhkhdkri.yahoo.com>
+Date:   Sun Sep 19 10:30:39 2021 +0430
+
+    add outlineInputBorder in textFields in login screen
+
+[33mcommit 600b6025f085c5aaa42f9505e9e3d83c198a3b79[m
+Author: fhkhd <fhkhdkri.yahoo.com>
+Date:   Sun Sep 19 02:38:25 2021 +0430
+
+    new changes of all files
+
+[33mcommit da6c27af971e0ebef5fea22fda761abec18b0e62[m
+Author: fhkhd <fhkhdkri.yahoo.com>
+Date:   Sat Sep 18 20:24:29 2021 +0430
+
+    add textField and send button to dialog
+
+[33mcommit 70b687be44325b8ce0c7ab10a4e85f42539cc7bd[m
+Author: fhkhd <fhkhdkri.yahoo.com>
+Date:   Sat Sep 18 20:22:17 2021 +0430
+
+    fix the bottom of the list's cards scroll
+
+[33mcommit 4e2d065909a339a4baa3b604b6e1bc93ec5ce504[m
+Author: fhkhd <fhkhdkri.yahoo.com>
+Date:   Sat Sep 18 17:32:03 2021 +0430
+
+    set dialog with close icon,title & dropDownButton
+
+[33mcommit 105b16bad6674920603b2080a09c4fc6dc3a404f[m
+Author: fhkhd <fhkhdkri.yahoo.com>
+Date:   Sat Sep 18 17:28:44 2021 +0430
+
+    set requests page with title,listView of cards & buttonNavigationBar
+
+[33mcommit e35abbe35c5c558ee04d3d6edaa750312dbb7b3c[m
+Author: fhkhd <fhkhdkri.yahoo.com>
+Date:   Fri Sep 17 23:16:53 2021 +0430
+
+    login screen 's ui creation
+
+[33mcommit 4706ef587eb85acd96faa5deaac5ba38629b87d5[m
+Author: fhkhd <fhkhdkri.yahoo.com>
+Date:   Fri Sep 17 18:29:01 2021 +0430
+
+    add the splash screen and start loggin page
+
+[33mcommit 64922a26c94a804fc5b66dcc8fb935d019169362[m
+Author: fhkhd <fhkhdkri.yahoo.com>
+Date:   Fri Sep 17 18:10:42 2021 +0430
+
+    start project
+
+[33mcommit 2bc2a4eccc36bea3e5767a5f99d63b9eb1dfae9c[m
+Author: fhkhdkri <77324136+fhkhdkri@users.noreply.github.com>
+Date:   Fri Sep 17 17:47:19 2021 +0430
+
+    Initial commit
