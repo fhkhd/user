@@ -11,6 +11,8 @@ class LogIn extends StatefulWidget {
 }
 
 class _LogInState extends State<LogIn> {
+
+  bool _isObscure = true;
   @override
   Widget build(BuildContext context) {
 
@@ -52,8 +54,9 @@ class _LogInState extends State<LogIn> {
                   borderSide: new BorderSide(width: 1.0,color: HexColor('246DFF')),
                 borderRadius: BorderRadius.circular(8.0),
               ),
-              hintText: 'نام کاربری',
+              // hintText: 'نام کاربری',
               contentPadding: EdgeInsets.only(top: 1.0),
+              labelText: 'نام کاربری',
               // border: InputBorder.none,
               prefixIcon: Icon(Icons.person_outline,color: Colors.grey,size: 24.0),
 
@@ -76,8 +79,8 @@ class _LogInState extends State<LogIn> {
           ),
         ),
       ),
-      elevation: 8.0,
-      shadowColor: HexColor('40246DFF'),
+      // elevation: 8.0,
+      // shadowColor: HexColor('40246DFF'),
     );
 
 
@@ -101,23 +104,32 @@ class _LogInState extends State<LogIn> {
         child: TextFormField(
           autofocus: false,
           // initialValue: '1234',
-          obscureText: true,
+            obscureText:  _isObscure,
           decoration: InputDecoration(
             border: new OutlineInputBorder(
               borderSide: new BorderSide(width: 1.0,color: HexColor('246DFF')),
               borderRadius: BorderRadius.circular(8.0),
             ),
             contentPadding: EdgeInsets.only(top: 1.0),
-            hintText: 'رمز عبور',
+            // hintText: 'رمز عبور',
             prefixIcon: Icon(Icons.lock,color: Colors.grey,size: 24.0),
+              labelText: 'رمز عبور',
+              suffixIcon: IconButton(
+                  icon: Icon(
+                      _isObscure ? Icons.visibility : Icons.visibility_off),
+                  onPressed: () {
+                    setState(() {
+                      _isObscure = !_isObscure;
+                    });
+                  })
           )
           ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8.0),
         ),
       ),
-      elevation: 8.0,
-      shadowColor: HexColor('40246DFF'),
+      // elevation: 8.0,
+      // shadowColor: HexColor('40246DFF'),
     );
 
 
@@ -157,13 +169,36 @@ class _LogInState extends State<LogIn> {
           children: <Widget>[
             login,
             SizedBox(height: 28.0),
-            usernametxt,
+            // usernametxt,
             SizedBox(height: 4.0,),
-            username,
+            Container(
+              child: username,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Color.fromRGBO(36, 109, 255, 0.25),
+                    // spreadRadius: 1/10000,
+                    blurRadius: 8,
+                    offset: Offset(0,4),
+                  )
+                ],
+              ),),
             SizedBox(height: 28.0,),
-            passwordtxt,
+            // passwordtxt,
             SizedBox(height: 4.0,),
-            password,
+            Container(
+              child: password,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Color.fromRGBO(36, 109, 255, 0.25),
+                    // spreadRadius: 1/10000,
+                    blurRadius: 8,
+                    offset: Offset(0,4),
+                  )
+                ],
+              ),
+            ),
             SizedBox(height: 24.0,),
             loginButton,
           ],

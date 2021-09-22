@@ -32,15 +32,17 @@ class Dialogss {
                     actions: <Widget>[
                       SizedBox(height: 0.0,),
                       Container(
-                        width: MediaQuery.of(context).size.width-50,
+                        width: MediaQuery.of(context).size.width-2*(MediaQuery.of(context).size.width/14.25),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                            Padding(padding: EdgeInsets.only(top: 24.0,right: 16.0),
+                            Padding(padding: EdgeInsets.only(
+                                top: MediaQuery.of(context).size.height/30,
+                                right: MediaQuery.of(context).size.width/22.5),
                               child: Text('لیست سوالات پیش فرض',
                                 style: TextStyle(
                                   fontFamily: 'IranianSans',
-                                  fontSize: 14.0,
+                                  fontSize: MediaQuery.of(context).size.width/25.75,
                                   color: HexColor('585858'),
                                   fontWeight: FontWeight.w400,
                                 ),
@@ -65,7 +67,7 @@ class Dialogss {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   height: 340.0,
-                  width: MediaQuery.of(context).size.width-48,
+                  width: MediaQuery.of(context).size.width-2*(MediaQuery.of(context).size.width/15),
                   child: Column(
                     children: <Widget>[
                       Material(

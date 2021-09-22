@@ -31,7 +31,11 @@ class _RequestsState extends State<Requests> {
               children: <Widget>[
                 Container(),
                       Padding(
-                        padding:  EdgeInsets.only(left: 26.0,top: 20.0,bottom: 0.0),
+                        padding:  EdgeInsets.only(
+                            left: MediaQuery.of(context).size.width/15,
+                            // top: 20.0,
+                            top: MediaQuery.of(context).size.height/35,
+                            bottom: 0.0),
                         child: InkWell(
                           onTap: (){
                             Navigator.of(context).push(MaterialPageRoute(
@@ -44,6 +48,7 @@ class _RequestsState extends State<Requests> {
                                 style: TextStyle(
                                   color: HexColor('246DFF'),
                                   fontFamily: 'IranianSans',
+                                  fontSize: MediaQuery.of(context).size.width/22.5,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
@@ -61,81 +66,31 @@ class _RequestsState extends State<Requests> {
         children: [
           Container(
             child: Padding(
-              padding: EdgeInsets.only(right: 24.0,top: 0.0),
+              padding: EdgeInsets.only(
+                  right: MediaQuery.of(context).size.width/15.0,
+                  top: 0.0),
               child: Text(
                 'لیست درخواست های داده شده',
                 style: TextStyle(
                   color: HexColor('252525'),
                   fontWeight: FontWeight.w500,
-                  fontSize: 16.0,
+                  fontSize: MediaQuery.of(context).size.width/22.5,
                   fontFamily: 'IranianSans',
                 ),
               ),),
           ),
-          Container(
-            height: MediaQuery.of(context).size.height,
-            child: ListView(
-              scrollDirection: Axis.vertical,
-              children: <Widget>[
-                Padding(padding: EdgeInsets.only(left: 20.0,right: 20.0,top: 18.0),
-                  child: Request(),
-                ),
-
-                SizedBox(height: 24.0,),
-                Padding(padding: EdgeInsets.only(left: 20.0,right: 20.0),
-                  child: Container(
-                    child: Request(),
-                  ),
-                ),
-
-                SizedBox(height: 24.0,),
-                Padding(padding: EdgeInsets.only(left: 20.0,right: 20.0),
-                  child: Container(
-                    child: Request(),
-                  ),
-                ),
-
-                SizedBox(height: 24.0,),
-                Padding(padding: EdgeInsets.only(left: 20.0,right: 20.0),
-                  child: Container(
-                    child: Request(),
-                  ),
-                ),
-
-                SizedBox(height: 24.0,),
-                Padding(padding: EdgeInsets.only(left: 20.0,right: 20.0),
-                  child: Container(
-                    child: Request(),
-                  ),
-                ),
-
-                SizedBox(height: 24.0,),
-                Padding(padding: EdgeInsets.only(left: 20.0,right: 20.0),
-                  child: Container(
-                    child: Request(),
-                  ),
-                ),
-
-                SizedBox(height: 24.0,),
-                Padding(padding: EdgeInsets.only(left: 20.0,right: 20.0),
-                  child: Container(
-                    child: Request(),
-                  ),
-                ),
-
-                SizedBox(height: 24.0,),
-                Padding(padding: EdgeInsets.only(left: 20.0,right: 20.0),
-                  child: Container(
-                    child: Request(),
-                  ),
-                ),
-
-                SizedBox(height: 135.0,),
-              ],
-            ),
-          )
+          Expanded(
+          child: Container(
+          height: MediaQuery.of(context).size.height,
+    child: ListView.builder(
+    scrollDirection: Axis.vertical,
+    itemBuilder: (_,int index) => itemCards(),
+    itemCount: 8+1,
+    ),
+    ))
         ],
       ),
+      
       bottomNavigationBar: InkWell(
         onTap: (){
           // createAlertDialog(context);
@@ -156,10 +111,15 @@ class _RequestsState extends State<Requests> {
         ),
       ),
       child: Container(
-        height: 144.0,
-        width: MediaQuery.of(context).size.width-48.0,
+        // height: 144.0,
+        width: MediaQuery.of(context).size.width-(2*(MediaQuery.of(context).size.width/15)),
         child: Padding(
-          padding: EdgeInsets.only(right: 12.0,top: 8.0),
+          padding: EdgeInsets.only(
+            right: MediaQuery.of(context).size.width/30,
+            top: MediaQuery.of(context).size.height/87,
+            // top: 8.0,
+            bottom: MediaQuery.of(context).size.height/87,
+          ),
           child: Column(
             children: [
               Row(
@@ -170,25 +130,26 @@ class _RequestsState extends State<Requests> {
                     style: TextStyle(
                       color: HexColor('585858'),
                       fontFamily: 'IranianSans',
-                      fontSize: 14.0,
+                      fontSize: MediaQuery.of(context).size.width/25.75,
                       fontWeight: FontWeight.w400,
                     ),
                     textAlign: TextAlign.right,
                   ),
-                  SizedBox(width: 4.0),
+                  // SizedBox(width: 4.0),
+                  SizedBox(width: MediaQuery.of(context).size.width/120,),
                   Text(
                     'محمد خواستار',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: 'IranianSans',
-                      fontSize: 14.0,
+                      fontSize: MediaQuery.of(context).size.width/25.75,
                       color: HexColor('252525'),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 8.0,),
+              SizedBox(height: MediaQuery.of(context).size.height/87,),
               Row(
                 children: [
                   Text(
@@ -196,25 +157,25 @@ class _RequestsState extends State<Requests> {
                     style: TextStyle(
                       color: HexColor('585858'),
                       fontFamily: 'IranianSans',
-                      fontSize: 14.0,
+                      fontSize: MediaQuery.of(context).size.width/25.75,
                       fontWeight: FontWeight.w400,
                     ),
                     textAlign: TextAlign.right,
                   ),
-                  SizedBox(width: 4.0),
+                  SizedBox(width: MediaQuery.of(context).size.width/120,),
                   Text(
                     'درحال برسی',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: 'IranianSans',
-                      fontSize: 14.0,
+                      fontSize: MediaQuery.of(context).size.width/25.75,
                       color: HexColor('252525'),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 8.0,),
+              SizedBox(height: MediaQuery.of(context).size.height/87,),
               Row(
                 children: [
                   Text(
@@ -222,25 +183,25 @@ class _RequestsState extends State<Requests> {
                     style: TextStyle(
                       color: HexColor('585858'),
                       fontFamily: 'IranianSans',
-                      fontSize: 14.0,
+                      fontSize: MediaQuery.of(context).size.width/25.75,
                       fontWeight: FontWeight.w400,
                     ),
                     textAlign: TextAlign.right,
                   ),
-                  SizedBox(width: 4.0),
+                  SizedBox(width: MediaQuery.of(context).size.width/120,),
                   Text(
                     _farsi.replaceFarsiNumber('قم،آزادگان،خیابان نواب،کوچه16'),
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: 'IranianSans',
-                      fontSize: 14.0,
+                      fontSize: MediaQuery.of(context).size.width/25.75,
                       fontWeight: FontWeight.w500,
                       color: HexColor('252525'),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 8.0,),
+              SizedBox(height: MediaQuery.of(context).size.height/87,),
               Row(
                 children: [
                   Text(
@@ -248,18 +209,18 @@ class _RequestsState extends State<Requests> {
                     style: TextStyle(
                       color: HexColor('585858'),
                       fontFamily: 'IranianSans',
-                      fontSize: 14.0,
+                      fontSize: MediaQuery.of(context).size.width/25.75,
                       fontWeight: FontWeight.w400,
                     ),
                     textAlign: TextAlign.right,
                   ),
-                  SizedBox(width: 4.0),
+                  SizedBox(width: MediaQuery.of(context).size.width/120,),
                   Text(
                     _farsi.replaceFarsiNumber('مشکل شبکه'),
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: 'IranianSans',
-                      fontSize: 14.0,
+                      fontSize: MediaQuery.of(context).size.width/25.75,
                       fontWeight: FontWeight.w500,
                       color: HexColor('252525'),
                     ),
@@ -270,8 +231,41 @@ class _RequestsState extends State<Requests> {
           ),
         ),
       ),
-      elevation: 8.0,
-      shadowColor: HexColor('40246DFF'),
+      // elevation: 8.0,
+      // shadowColor: HexColor('40246DFF'),
+    );
+  }
+
+
+  Widget itemCards(){
+    return Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.only(
+            left: MediaQuery.of(context).size.width/15,
+            right: MediaQuery.of(context).size.width/15,
+            // top: 10.0,
+            top: MediaQuery.of(context).size.height/67,
+          ),
+          child: Container(
+            child: Request(),
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Color.fromRGBO(36, 109, 255, 0.25),
+                  // spreadRadius: 1/10000,
+                  blurRadius: 8,
+                  offset: Offset(0,4),
+                )
+              ],
+            ),
+          ),
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height/49,
+          // height: 14.0,
+        ),
+      ],
     );
   }
 

@@ -7,6 +7,16 @@ import 'LoggIn.dart';
 import 'package:flutter/services.dart';
 
 void main() => runApp(MaterialApp(
+
+  builder: (context,child) {
+    return MediaQuery(
+      child: child!,
+      data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+    );
+  },
+
+
+
   title: "App",
   localizationsDelegates: [
     GlobalMaterialLocalizations.delegate,
