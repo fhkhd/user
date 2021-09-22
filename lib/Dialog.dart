@@ -72,14 +72,23 @@ class Dialogss {
                     children: <Widget>[
                       Material(
                         borderRadius: BorderRadius.circular(8.0),
-                        elevation: 8.0,
-                        shadowColor: HexColor('40246DFF'),
+                        // elevation: 8.0,
+                        // shadowColor: HexColor('40246DFF'),
                         child: Container(
                           height: 40.0,
                           width: MediaQuery.of(context).size.width-80,
                           decoration: BoxDecoration(
                             border: Border.all(width: 1.0,color: HexColor('246DFF')),
                             borderRadius: BorderRadius.circular(8.0),
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color.fromRGBO(36, 109, 255, 0.25),
+                                // spreadRadius: 1/10000,
+                                blurRadius: 8,
+                                offset: Offset(0,4),
+                              )
+                            ],
                           ),
                           child: new DropdownButton<String>(
                             icon: Padding(
@@ -156,11 +165,18 @@ class Dialogss {
                           decoration: BoxDecoration(
                             border: Border.all(width: 1.0,color: HexColor('246DFF')),
                             borderRadius: BorderRadius.circular(8.0),
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color.fromRGBO(36, 109, 255, 0.25),
+                                // spreadRadius: 1/10000,
+                                blurRadius: 8,
+                                offset: Offset(0,4),
+                              )
+                            ],
                           ),
                         ),
                         borderRadius: BorderRadius.circular(8.0),
-                        elevation: 8.0,
-                        shadowColor: HexColor('40246DFF'),
                       ),
                       SizedBox(height: 28.0,),
                       Padding(
