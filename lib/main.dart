@@ -14,9 +14,7 @@ void main() => runApp(MaterialApp(
       data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
     );
   },
-
-
-
+  
   title: "App",
   localizationsDelegates: [
     GlobalMaterialLocalizations.delegate,

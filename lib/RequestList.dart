@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:user/LoggIn.dart';
-import 'package:user/main.dart';
 import 'ButtonNavigationBar.dart';
 import 'farsiNumber.dart';
 import 'Dialog.dart';
@@ -34,7 +33,6 @@ class _RequestsState extends State<Requests> {
                       Padding(
                         padding:  EdgeInsets.only(
                             left: MediaQuery.of(context).size.width/15,
-                            // top: 20.0,
                             top: MediaQuery.of(context).size.height/35,
                             bottom: 0.0),
                         child: InkWell(
@@ -97,7 +95,6 @@ class _RequestsState extends State<Requests> {
       
       bottomNavigationBar: InkWell(
         onTap: (){
-          // createAlertDialog(context);
           _dialogss.createAlertDialog(context);
         },
         child: ButtonNavigationBar("افزودن درخواست(پیش فرض)"),
@@ -115,13 +112,11 @@ class _RequestsState extends State<Requests> {
         ),
       ),
       child: Container(
-        // height: 144.0,
         width: MediaQuery.of(context).size.width-(2*(MediaQuery.of(context).size.width/15)),
         child: Padding(
           padding: EdgeInsets.only(
             right: MediaQuery.of(context).size.width/30,
             top: MediaQuery.of(context).size.height/87,
-            // top: 8.0,
             bottom: MediaQuery.of(context).size.height/87,
           ),
           child: Column(
@@ -139,7 +134,6 @@ class _RequestsState extends State<Requests> {
                     ),
                     textAlign: TextAlign.right,
                   ),
-                  // SizedBox(width: 4.0),
                   SizedBox(width: MediaQuery.of(context).size.width/120,),
                   Text(
                     'محمد خواستار',
@@ -235,8 +229,6 @@ class _RequestsState extends State<Requests> {
           ),
         ),
       ),
-      // elevation: 8.0,
-      // shadowColor: HexColor('40246DFF'),
     );
   }
 
@@ -248,7 +240,6 @@ class _RequestsState extends State<Requests> {
           padding: EdgeInsets.only(
             left: MediaQuery.of(context).size.width/15,
             right: MediaQuery.of(context).size.width/15,
-            // top: 10.0,
             top: MediaQuery.of(context).size.height/67,
           ),
           child: Container(
@@ -257,7 +248,6 @@ class _RequestsState extends State<Requests> {
               boxShadow: [
                 BoxShadow(
                   color: Color.fromRGBO(36, 109, 255, 0.25),
-                  // spreadRadius: 1/10000,
                   blurRadius: 8,
                   offset: Offset(0,4),
                 )
@@ -267,10 +257,8 @@ class _RequestsState extends State<Requests> {
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height/49,
-          // height: 14.0,
         ),
       ],
     );
   }
-
 }

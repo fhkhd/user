@@ -29,27 +29,7 @@ class _LogInState extends State<LogIn> {
       textAlign: TextAlign.right,
     );
 
-    final usernametxt= Text(
-      'نام کاربری :',
-      style: TextStyle(
-        fontWeight: FontWeight.w400,
-        fontSize: 16.0,
-        fontFamily: 'IranianSans',
-        color: HexColor('585858'),
-      ),
-      textAlign: TextAlign.right,
-    );
-
-    final username =
-    // Material(
-    //   borderRadius: BorderRadius.circular(8.0),
-    //   child: InkWell(
-    //     child: Container(
-          // height: 40.0,
-          // height: 2*(MediaQuery.of(context).size.height/35),
-          // width: 264.0,
-          // width: MediaQuery.of(context).size.width-(4*(MediaQuery.of(context).size.width/30.0)),
-    TextFormField(
+    final username = TextFormField(
             keyboardType: TextInputType.emailAddress,
             autofocus: true,
             decoration: InputDecoration(
@@ -57,73 +37,20 @@ class _LogInState extends State<LogIn> {
                   borderSide: new BorderSide(width: 1.0,color: HexColor('246DFF')),
                 borderRadius: BorderRadius.circular(8.0),
               ),
-              // hintText: 'نام کاربری',
               contentPadding: EdgeInsets.only(
-                // top: (MediaQuery.of(context).size.height/35),
-                // bottom: (MediaQuery.of(context).size.height/35)-(MediaQuery.of(context).size.height/35)/1.5,
                 top: (MediaQuery.of(context).size.height/35)/2,
                 bottom: (MediaQuery.of(context).size.height/35)/2,
               ),
               labelText: 'نام کاربری',
-              // border: InputBorder.none,
               prefixIcon: Icon(Icons.person_outline,color: Colors.grey,
-                  // size: 24.0
                   size: MediaQuery.of(context).size.width/15,
             ),
-
-              // Row(
-              //   children: [
-              //     Divider(
-              //       height: 10.0,
-              //       thickness: 0.2,
-              //       color: Colors.black,
-              //       indent: 0.2,
-              //       endIndent: 0.2,
-              //     ),
-              //
-              //   ],
-              // ),
             ),
           );
-          // decoration: BoxDecoration(
-          //   borderRadius: BorderRadius.circular(8.0),
-          // ),
-      //   ),
-      // ),
-      // elevation: 8.0,
-      // shadowColor: HexColor('40246DFF'),
-    // );
 
 
-    final passwordtxt= Text(
-      'رمز عبور :',
-      style: TextStyle(
-        fontWeight: FontWeight.w400,
-        fontSize: 16.0,
-        fontFamily: 'IranianSans',
-        color: HexColor('585858'),
-      ),
-      textAlign: TextAlign.right,
-    );
-
-    // Color getIconColor(bool isPressed){
-    //   if(isPressed=true){
-    //     return Colors.red;
-    //   }
-    //   else{
-    //     return Colors.green;
-    //   }
-    // }
-
-    final password =
-      // Container(
-        // height: 40.0,
-        // height: 2*(MediaQuery.of(context).size.height/35),
-        // width: 264.0,
-        // width: MediaQuery.of(context).size.width-(4*(MediaQuery.of(context).size.width/30.0)),
-   TextFormField(
+    final password = TextFormField(
           autofocus: false,
-          // initialValue: '1234',
             obscureText:  _isObscure,
           decoration: InputDecoration(
             helperMaxLines: 10,
@@ -132,14 +59,10 @@ class _LogInState extends State<LogIn> {
               borderRadius: BorderRadius.circular(8.0),
             ),
             contentPadding: EdgeInsets.only(
-              // top: (MediaQuery.of(context).size.height/35),
-              // bottom: (MediaQuery.of(context).size.height/35)-(MediaQuery.of(context).size.height/35)/1.5,
               top: (MediaQuery.of(context).size.height/35)/2,
               bottom: (MediaQuery.of(context).size.height/35)/2,
             ),
-            // hintText: 'رمز عبور',
             prefixIcon: Icon(Icons.lock,color: Colors.grey,
-                // size: 24.0
               size: MediaQuery.of(context).size.width/15,
             ),
               labelText: 'رمز عبور',
@@ -152,26 +75,15 @@ class _LogInState extends State<LogIn> {
                     });
                   })
           )
-   // )
-        // decoration: BoxDecoration(
-        //   borderRadius: BorderRadius.circular(8.0),
-        // ),
     );
 
 
     final loginButton = Center(
-      // padding: EdgeInsets.only(
-      //   left: 20,
-      //   right: 20,
-      //     // bottom: 75.0
-      // ),
       child: Material(
         color: HexColor('246DFF'),
         borderRadius: BorderRadius.circular(8.0),
         child: MaterialButton(
           minWidth: MediaQuery.of(context).size.width-(9.20*(MediaQuery.of(context).size.width/18.75)),
-          // minWidth: 184.0,
-          // height: 44.0,
           height: MediaQuery.of(context).size.height/15.75,
 
           onPressed: (){
@@ -184,7 +96,6 @@ class _LogInState extends State<LogIn> {
             style: TextStyle(
               color: Colors.white,
               fontFamily: 'IranianSans',
-              // fontSize: 18.0,
               fontSize: MediaQuery.of(context).size.width/20.0,
               fontWeight: FontWeight.w700,),
             textAlign: TextAlign.center,
@@ -202,14 +113,11 @@ class _LogInState extends State<LogIn> {
           padding: EdgeInsets.only(
               right: 2*(MediaQuery.of(context).size.width/15),
               left: 2*(MediaQuery.of(context).size.width/15),
-            // 48,
           ),
           children: <Widget>[
             login,
-            // SizedBox(height: 59.0),
             SizedBox(height: MediaQuery.of(context).size.height/11.75,),
             Container(
-              // height: 2*(MediaQuery.of(context).size.height/35),
               width: MediaQuery.of(context).size.width-(4*(MediaQuery.of(context).size.width/30.0)),
               child: username,
               decoration: BoxDecoration(
@@ -218,19 +126,15 @@ class _LogInState extends State<LogIn> {
                 boxShadow: [
                   BoxShadow(
                     color: Color.fromRGBO(36, 109, 255, 0.25),
-                    // spreadRadius: 1/10000,
                     blurRadius: 8,
                     offset: Offset(0,4),
                   )
                 ],
               ),),
-            // SizedBox(height: 58.0,),
             SizedBox(height: MediaQuery.of(context).size.height/12,),
-            // passwordtxt,
 
             Container(
               child: password,
-              // height: 2*(MediaQuery.of(context).size.height/35),
               width: MediaQuery.of(context).size.width-(4*(MediaQuery.of(context).size.width/30.0)),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.0),
@@ -238,14 +142,12 @@ class _LogInState extends State<LogIn> {
                 boxShadow: [
                   BoxShadow(
                     color: Color.fromRGBO(36, 109, 255, 0.25),
-                    // spreadRadius: 1/10000,
                     blurRadius: 8,
                     offset: Offset(0,4),
                   )
                 ],
               ),
             ),
-            // SizedBox(height: 33.0,),
             SizedBox(height: MediaQuery.of(context).size.height/21,),
             loginButton,
           ],
