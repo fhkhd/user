@@ -21,6 +21,7 @@ class _RequestsState extends State<Requests> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        toolbarHeight: MediaQuery.of(context).size.height/12.35,
         elevation: 0.0,
         backgroundColor: Colors.white,
         actions: <Widget>[
@@ -44,7 +45,7 @@ class _RequestsState extends State<Requests> {
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
-                              Text('خروج از حساب',
+                              Text('خروج از حساب ',
                                 style: TextStyle(
                                   color: HexColor('246DFF'),
                                   fontFamily: 'IranianSans',
@@ -62,13 +63,16 @@ class _RequestsState extends State<Requests> {
           ),
         ],
       ),
-      body: ListView(
+      body: Column(
         children: [
           Container(
+            alignment: Alignment.topRight,
             child: Padding(
               padding: EdgeInsets.only(
                   right: MediaQuery.of(context).size.width/15.0,
-                  top: 0.0),
+                  top: MediaQuery.of(context).size.height/60,
+                  bottom: MediaQuery.of(context).size.height/65
+              ),
               child: Text(
                 'لیست درخواست های داده شده',
                 style: TextStyle(
